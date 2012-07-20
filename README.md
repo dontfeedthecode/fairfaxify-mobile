@@ -1,6 +1,8 @@
 Fairfaxify Mobile
 =============
 
+## [Live demo](http://limelightdigitalusa.com/fairfaxify/mobile "Fairfaxify Mobile")
+
 #### What is this?
 
 Fairfaxify Mobile is a simple web-based mobile application built in Sencha Touch 2 that connects to Fairfaxify API to pull data in via JSONP.

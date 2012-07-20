@@ -1,0 +1,22 @@
+{
+    "id": "ExtBox1-ext-gen9183",
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "docked": "left",
+        "id": "ArticleView",
+        "styleHtmlContent": true,
+        "tpl": "\t<div class=\"article_info\">\n\t  <div><img src=\"{heroImage}\"></div>\n\t  <div class=\"article_info_body\">{body}</div>\n\t</div>\n",
+        "width": "100%",
+        "designer|userClassName": "ArticleView",
+        "designer|userAlias": "ArticleViewPanel"
+    },
+    "customConfigs": [],
+    "designerId": "916716a9-eccc-4378-8f0b-d3070fe0806a",
+    "$viewOrder": 2,
+    "expanded": true
+}

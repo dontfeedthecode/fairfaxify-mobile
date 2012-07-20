@@ -1,0 +1,17 @@
+{
+    "id": "ExtBox1-ext-gen10042",
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "fairfaxify.css",
+        "id": "fairfaxifycss"
+    },
+    "customConfigs": [],
+    "designerId": "083dc702-6630-4e9c-aff5-2ccc671c55eb",
+    "$viewOrder": 0,
+    "expanded": true
+}

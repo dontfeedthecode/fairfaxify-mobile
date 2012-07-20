@@ -1,0 +1,32 @@
+{
+    "id": "ExtBox1-ext-gen2211",
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Article"
+        ],
+        "stores": [
+            "ArticleStore",
+            "ArticleViewStore"
+        ],
+        "views": [
+            "MainView",
+            "Articles",
+            "ArticleView"
+        ],
+        "name": "Fairfaxify",
+        "controllers": [
+            "MainController"
+        ]
+    },
+    "customConfigs": [],
+    "designerId": "application",
+    "$viewOrder": 0,
+    "iconCls": "icon-application",
+    "expanded": true
+}

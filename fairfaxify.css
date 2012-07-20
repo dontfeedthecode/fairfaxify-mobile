@@ -1,0 +1,50 @@
+.articlelistitem img {
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+.articlelistitem span, .article_info span {
+	display: block;
+}
+
+.articlelistitem span:last-child:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.articlelistitem span.article_heading {
+	font-size: 130%;
+}
+
+.articlelistitem span.article_description {
+	font-size: 90%;
+	font-weight: normal;
+	color: #666;
+}
+
+.articlelistitem {
+	clear: both;
+}
+
+.article_info span, .article_info div {
+	text-align: center;
+}
+
+.article_info img {
+	display: inline-block;
+	margin-top: 15px;
+}
+
+.article_info_header {
+	font-size: 150%;
+	color: #666;
+}
+
+.article_info_body {
+	font-size: 90%;
+}

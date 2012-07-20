@@ -1,0 +1,150 @@
+{
+    "id": "ExtBox1-ext-gen5606",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainController"
+    },
+    "customConfigs": [],
+    "designerId": "659bab19-3ada-4fdf-b428-45c04fb6f158",
+    "$viewOrder": 0,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen14026",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ArticleList",
+                "selector": "#ArticleList",
+                "xtype": "list",
+                "designer|userClassName": "ArticleList"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen17596",
+            "type": "controllerroute",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "ArticleListTap",
+                "designer|params": [
+                    "id"
+                ],
+                "implHandler": [
+                    ""
+                ],
+                "url": "articles/:id",
+                "designer|userClassName": "ArticleListTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen21492",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "var MainView     = this.getMainView(),\r",
+                    "ArticleId    = record.get('id'),\r",
+                    "ArticleView  = this.getArticleView(),\r",
+                    "ArticleViewStore = Ext.getStore('ArticleViewStore');\r",
+                    "\r",
+                    "// Normally we would filter down an existing data store by ID, however\r",
+                    "// as each call has a different set of properties we will load them\r",
+                    "// seperately.\r",
+                    "ArticleViewStore.setProxy(\r",
+                    "{\r",
+                    "    type: 'jsonp',\r",
+                    "    url: 'http://limelightdigitalusa.com/fairfaxify/rest/article/' + ArticleId,\r",
+                    "    reader: {\r",
+                    "        type: 'json'\r",
+                    "    }\r",
+                    "}\r",
+                    ");\r",
+                    "\r",
+                    "// Apply loading mask\r",
+                    "Ext.Viewport.setMasked({\r",
+                    "    xtype: 'loadmask',\r",
+                    "    message: 'Loading article...'\r",
+                    "});\r",
+                    "\r",
+                    "// Load article\r",
+                    "ArticleViewStore.load({\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "        // Push pseudo-view into port\r",
+                    "        MainView.push({\r",
+                    "            title: record.get('header'),\r",
+                    "            tpl:   ArticleView.getTpl(),\r",
+                    "            data:  ArticleViewStore.data.items[0].data\r",
+                    "        });\r",
+                    "        // Remove loading mask\r",
+                    "        Ext.Viewport.setMasked(false);\r",
+                    "    },\r",
+                    "    scope: this\r",
+                    "});"
+                ],
+                "element": "ArticleList",
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "list",
+                "designer|userClassName": "onListItemTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen22042",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "MainView",
+                "selector": "#MainView",
+                "designer|userClassName": "MainView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen33511",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "ArticleView",
+                "selector": "#ArticleView",
+                "xtype": "ArticleViewPanel",
+                "autoCreate": true,
+                "designer|userClassName": "ArticleView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}
